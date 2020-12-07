@@ -11,9 +11,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      console.log("Before")
       await axios.post("/api/patient/answer", { answer: formData });
-      console.log(formData);
       setFormData([])
     } catch (error) {
       console.log(error);
